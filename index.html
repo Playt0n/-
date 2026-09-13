@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+        <title>Интеллектуальное планирование</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header__inner">
+                <a href="#" class="logo">
+                    <svg class="logo__icon" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="60" r="40" stroke="currentColor" stroke-width="2" fill="none" />                     
+                    </svg>
+                </a>
+                <nav class="nav">
+                    <a href="#directions" class="nav__link">Направления</a>
+                    <a href="#partners" class="nav__link">Партнеры</a>
+                    <a href="#about" class="nav__link">О компании</a>
+                    <a href="#contacts" class="nav__link">Контакты</a>
+                </nav>
+                <a href="tel:+79319819171" class="header__phone" aria-label="Позвонить нам">
+                    <img src="call.png" alt="Звонок" width="28" height="28">
+                </a>
+                <a href="malito:info@iqplanning.ru" class="header__email">info@iqplanning.ru</a>
+                <button class="burger" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="container hero__inner">
+                    <div class="hero__content">
+                        <h1 class="hero__title">Интеллектуальное<br>Планирование
+                        <svg class="hero__icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="100,20 140,100 60,100" stroke="currentColor" stroke-width="2" fill="none" />
+                        </svg>
+                        </h1>
+                        <p class="hero__text">Специализированная организация в сфере транспортных обследований, транспортно&#8209;экономических изысканий, транспортной аналитики и экспертизы любой сложности.</p>
+                        <a href="#contacts" class="btn btn--filled">Начнем</a>
+                    </div>
+                    <div class="hero__image" aria-hidden="true">
+                        <svg viewBox="0 0 320 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="20" y1="60" x2="180" y2="60" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            <section class="cards" id="cards">
+                <div class="container cards__grid">
+                    <article class="card" id="directions">
+                        <div class="card__image" aria-hidden="true">
+                            <svg viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="20" y1="60" x2="180" y2="60" stroke="currentColor" stroke-width="2" stroke-dasharray="8 6" />
+                            </svg>
+                        </div>
+                        <h2 class="card__title">Направления</h2>
+                        <ul class="card__list">
+                            <li>Математическое моделиррование транспортных потоков</li>
+                            <li>Разработка транспортных микромоделей (PTV Visum)</li>
+                            <li>Разработка транспортных микромоделей (PTV Vissim)</li>
+                            <li>Транспортно-экономические изыскания для градостроительства</li>
+                        </ul>
+                        <a href="directions.html" class="btn btn--outline">Узнать больше</a>
+                    </article>
+                    <article class="card" id="projects">
+                        <div class="card__image" aria-hidden="true">
+                            <svg viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="100" cy="60" r="40" stroke="currentColor" stroke-width="2" fill="none" />
+                            </svg>
+                        </div>
+                        <h2 class="card__title">Проекты</h2>
+                        <ul class="card__list">
+                            <li>Более 200 транспортно-экономических работ</li>
+                            <li>Более 80 транспортно-экономических изысканий</li>
+                            <li>Более 50 транспортных разделов документации</li>
+                            <li>Более 20 проектов натурных обследований</li>
+                        </ul>
+                        <a href="projects.html" class="btn btn--outline">Узнать больше</a>
+                    </article>
+                    <article class="card" id="partners">
+                        <div class="card__image" aria-hidden="true">
+                            <svg viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="60" y="35" width="80" height="50" />
+                            </svg>
+                        </div>
+                        <h2 class="card__title">Партнеры</h2>
+                        <ul class="card__list">
+                            <li>Государственные структуры</li>
+                            <li>Проектные организации</li>
+                            <li>Инвесторы и застройщики</li>
+                            <li>Транспортные операторы</li>
+                        </ul>
+                        <a href="partners.html" class="btn btn--outline">Узнать больше</a>
+                    </article>
+                </div>
+            </section>
+            <section class="about" id="about">
+                <div class="container about__inner">
+                    <div class="about__content">
+                        <h2 class="about__title">О компании</h2>
+                        <p class="about__text">
+                            ООО «Интеллектуальное планирование» — специализированная организация
+            в сфере транспортных обследований, транспортно-экономических изысканий,
+            транспортной аналитики и экспертизы любой сложности.
+            Компанией выполнено более 200 проектов в Санкт-Петербурге,
+            регионах России и странах СНГ.
+                        </p>
+                        <div class="about_stats">
+                            <div class="stat">
+                                <span class="stat__number">&gt;200</span>
+                                <span class="stat__label">Транспортных работ</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">&gt;80</span>
+                                <span class="stat__label">Изысканий</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__image" aria-hidden="true">
+                        <svg viewBox="0 0 240 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <line x1="20" y1="60" x2="180" y2="60" stroke="currentColor" stroke-width="2" />  
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer" id="contacts">
+                <div class="container footer__inner">
+                    <address class="footer__address">197022, г. Санкт-Петербург,<br>улица Всеволода Вишневского,<br>дом 4, литер А, офис 32</address>
+                    <div class="footer__contacts">
+                        <a href="mailto:info@iqplanning.ru" class="footer__link">info@iqplanning.ru</a>
+                        <a href="tel:+79319819171" class="footer__link">+7 (931) 981-91-71</a>
+                    </div>
+                </div>
+            </footer>
+            <script>
+                const burger = document.querySelector('.burger');
+                const nav = document.querySelector('nav');
+                burger.addEventListener('click', () => {
+                    const isOpen = nav.classList.toggle('nav--open');
+                    burger.classList.toggle('burger--open', isOpen);
+                    burger.setAttribute('aria-expanded', isOpen);
+                });
+                nav.querySelectorAll('.nav__link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        nav.classList.remove('burger--open');
+                        burger.setAttribute('aria-expanded',false);
+                    })
+                })
+            </script>
+    </body>
+    </html>
