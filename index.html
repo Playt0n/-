@@ -65,7 +65,7 @@
                             <li>Разработка транспортных микромоделей (PTV Vissim)</li>
                             <li>Транспортно-экономические изыскания для градостроительства</li>
                         </ul>
-                        <a href="directions.html" class="btn btn--outline">Узнать больше</a>
+                        <a href="javascript:void(0)" class="btn btn--outline" data-sheet="directions">Узнать больше</a>
                     </article>
                     <article class="card" id="projects">
                         <div class="card__image" aria-hidden="true">
@@ -80,7 +80,7 @@
                             <li>Более 50 транспортных разделов документации</li>
                             <li>Более 20 проектов натурных обследований</li>
                         </ul>
-                        <a href="projects.html" class="btn btn--outline">Узнать больше</a>
+                        <a href="javascript:void(0)" class="btn btn--outline" data-sheet="projects">Узнать больше</a>
                     </article>
                     <article class="card" id="partners">
                         <div class="card__image" aria-hidden="true">
@@ -95,7 +95,7 @@
                             <li>Инвесторы и застройщики</li>
                             <li>Транспортные операторы</li>
                         </ul>
-                        <a href="partners.html" class="btn btn--outline">Узнать больше</a>
+                        <a href="javascript:void(0)" class="btn btn--outline" data-sheet="partners">Узнать больше</a>
                     </article>
                 </div>
             </section>
@@ -128,6 +128,75 @@
                     </div>
                 </div>
             </section>
+        </main>
+        <div class="sheet-backdrop" id="sheetbackdrop"></div>
+    <div class="sheet" id="bottomSheet">
+    <div class="sheet__handle"></div>
+    <button class="sheet__close" id="sheetClose" aria-label="Закрыть"></button>
+    <div class="sheet__content">
+        <h2 class="sheet__title" id="sheetTitle">
+        </h2>
+        <p class="sheet__text" id="sheetText">
+        </p>
+    </div>
+    </div>
+    <script>
+                var sheetData = {
+                    directions: {
+                        title: 'Направления',
+                        text: 'Математическое моделирование'
+                    },
+                    projects: {
+                        title: 'Проекты',
+                        text: 'Более 200 транспортно-экономических работ'
+                    },
+                    partners: {
+                        title: 'Партнеры',
+                        text: 'Сотрудничаем с гос структурами'
+                    }
+                };
+                function openSheet (key) {
+                    var d = sheetData[key];
+                        var d = sheetData[key];
+                        if (!d) return;
+                        document.getElementById('sheetTitle').textContent = d.title;
+                        document.getElementById('sheetText').textContent = d.text;
+                        document.getElementById('bottomSheet').classList.add('is-open');
+                        document.getElementById('sheetBackdrop').classList.add('is-open');
+                        document.body.style.overflow = 'hidden';
+                    }
+                    function closeSheet() {
+                        document.getElementById('bottomSheet').classList.remove('is-open');
+                        document.getElementById('sheetBackdrop').classList.remove('is-open');
+                        document.body.style.overflow = '';
+                    }
+                    var burger = document.querySelector('.burger');
+                    var nav = document.querySelector('.nav');
+                    if (burger && nav) {
+                        burger.addEventListener('click', function () {
+                            var isOpen = nav.classList.toggle('nav--open');
+                            burger.classList.toggle('burger--open', isOpen);
+                            burger.setAttribute('aria-expanded', String(isOpen));
+                        });
+                        nav.querySelectorAll('.nav__link').forEach(function (link) {
+                            link.addEventListener('click', function () {
+                                nav.classList.remove('nav--open');
+                                burger.classList.remove('burger--open');
+                                burger.setAttribute('aria-expanded', 'false');
+                            });
+                        });
+                    }
+                    var sheetClose = document.getElementById('sheetClose');
+                    var backdrop = document.getElementById('sheetBackdrop');
+                    if (sheetClose) sheetClose.addEventListener('click', closeSheet);
+                    if (backdrop) backdrop.addEventListener('click', closeSheet);
+                    document.querySelectorAll('[data-sheet]').forEach(function (btn) {
+                        btn.addEventListener('click', function ()
+                    {
+                        openSheet(btn.dataset.sheet);
+                    });
+                    });
+            </script>
             <footer class="footer" id="contacts">
                 <div class="container footer__inner">
                     <address class="footer__address">197022, г. Санкт-Петербург,<br>улица Всеволода Вишневского,<br>дом 4, литер А, офис 32</address>
@@ -137,20 +206,5 @@
                     </div>
                 </div>
             </footer>
-            <script>
-                const burger = document.querySelector('.burger');
-                const nav = document.querySelector('nav');
-                burger.addEventListener('click', () => {
-                    const isOpen = nav.classList.toggle('nav--open');
-                    burger.classList.toggle('burger--open', isOpen);
-                    burger.setAttribute('aria-expanded', isOpen);
-                });
-                nav.querySelectorAll('.nav__link').forEach(link => {
-                    link.addEventListener('click', () => {
-                        nav.classList.remove('burger--open');
-                        burger.setAttribute('aria-expanded',false);
-                    })
-                })
-            </script>
     </body>
     </html>
