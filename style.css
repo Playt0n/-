@@ -153,8 +153,15 @@ address {font-style: normal; }
     color: var(--clr-gray-3);
     transition: color var(--transition);
     font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
 }
-.header__email:hover { color: var(--clr-black); }
+.header__email:hover,
+.header__email:focus-visible { 
+    color: var(--clr-black);
+    text-decoration: underline;
+    outline: none;
+}
 .logo {
     flex-shrink: 0;
     color: var(--clr-black);
@@ -242,17 +249,6 @@ address {font-style: normal; }
     cursor: pointer;
     transition: background var(--transition), color var(--transition), border-color var(--transition);
     white-space: nowrap;
-}
-.btn--filled {
-    background: var(--clr-black);
-    color: var(--clr-white);
-    border: 2px solid var(--clr-black);
-}
-.btn--filled:hover {
-    background: var(--clr-gray-4);
-    border-color: var(--clr-gray-4);
-    box-shadow: 0 10px 30px var(--clr-black);
-    transition: box-shadow var(--transition) ease;
 }
 .btn--outline {
     background: transparent;
