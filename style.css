@@ -506,7 +506,10 @@ address {font-style: normal; }
 .about__image { width: 400px; }
 }
 @media (max-width: 760px) {
-    .burger { display: flex; }
+    .burger { 
+        display: flex;
+    flex-shrink: 0;
+    }
     .header__phone {margin-left: auto;}
     .nav {
         display: none;
@@ -562,6 +565,31 @@ address {font-style: normal; }
     .partners-logos {
         grid-template-columns: repeat(2, 1fr);
     }
+    header {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+    .header__top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+        min-width: 0;
+    }
+    .header__contacts {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        flex-shrink: 1;
+        min-width: 0;
+    }
+    .header__contacts a {
+        font-size: 11px;
+        white-space: nowrap;
+    }
 }
 @media (max-width: 480px) {
     .container {padding-inline: var(--space-4); }
@@ -579,6 +607,9 @@ address {font-style: normal; }
     }
     .partner-logo img {
         max-height: 44px;
+    }
+    .header__email {
+        display: none;
     }
 }
 @media (prefers-reduced-motion: reduce) {
