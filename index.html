@@ -18,10 +18,10 @@
                     <a href="#about" class="nav__link">О компании</a>
                     <a href="#contacts" class="nav__link">Контакты</a>
                 </nav>
-                <a href="tel:+79319819171" class="header__phone" aria-label="Позвонить нам">
-                    <img src="call.png" alt="Звонок" width="28" height="28">
-                </a>
+                <div class="header__contacts"></div>
+                <a href="tel:+79319819171" class="header__phone">+79319819171</a>
                 <a href="mailto:info@iqplanning.ru" class="header__email" aria-label="Написать на info@iqplanning.ru">info@iqplanning.ru</a>
+                </div>
                 <button class="burger" aria-label="Открыть меню" aria-expanded="false">
                     <span></span>
                     <span></span>
@@ -167,10 +167,111 @@
     </ul>
     `
                     },
-                    partners: {
-                        title: 'Партнеры',
-                        text: 'Сотрудничаем с гос структурами'
-                    }
+partners: {
+    title: 'Партнёры и заказчики',
+    html: `
+        <p>
+            Среди наших партнёров и заказчиков — государственные структуры,
+            проектные организации, инвесторы, застройщики
+            и транспортные операторы по всей России.
+        </p>
+
+        <h3>Нам доверяют</h3>
+
+        <div class="partners-logos">
+            <a class="partner-logo" href="https://megamade.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p01.png" alt="Мегамейд">
+            </a>
+            <a class="partner-logo" href="https://aag.company/" target="_blank" rel="noopener noreferrer">
+                <img src="p02.png" alt="AAG company">
+            </a>
+            <a class="partner-logo" href="https://spectrum-group.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p03.svg" alt="Спектрум">
+            </a>
+            <a class="partner-logo" href="https://legenda-dom.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p04.png" alt="LEGENDA">
+            </a>
+            <a class="partner-logo" href="https://itr.spb.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p05.png" alt="ИТР СПБ">
+            </a>
+            <a class="partner-logo" href="https://apostol.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p06.png" alt="АМ Апостола">
+            </a>
+            <a class="partner-logo" href="https://peterburggaz.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p07.png" alt="ПетербургГаз">
+            </a>
+            <a class="partner-logo" href="https://agportal.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p08.png" alt="АГ Портал">
+            </a>
+            <a class="partner-logo" href="https://www.bfa-d.ru/?=" target="_blank" rel="noopener noreferrer">
+                <img src="p09.png" alt="БФА Девелопмент">
+            </a>
+            <a class="partner-logo" href="https://www.glavstroy-spb.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p10.png" alt="Главстрой СПБ">
+            </a>
+            <a class="partner-logo" href="https://www.rikel.net/" target="_blank" rel="noopener noreferrer">
+                <img src="p11.png" alt="ЗАО РИКЭЛ">
+            </a>
+            <a class="partner-logo" href="https://glorax.com/" target="_blank" rel="noopener noreferrer">
+                <img src="p12.png" alt="GLORAX">
+            </a>
+            <a class="partner-logo" href="https://baltcom.spb.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p13.svg" alt="Балтийская Коммерция">
+            </a>
+            <a class="partner-logo" href="https://ctpspb.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p14.png" alt="ЦТП СПБ">
+            </a>
+            <a class="partner-logo" href="https://www.stpr.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p15.png" alt="НПС ">
+            </a>
+            <a class="partner-logo" href="http://www.kubspb.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p16.png" alt="КУБ ГК">
+            </a>
+            <a class="partner-logo" href="https://electrotrans.spb.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p17.png" alt="ГЭТ СПБ">
+            </a>
+            <a class="partner-logo" href="https://studio44.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p18.svg" alt="Студия 44">
+            </a>
+            <a class="partner-logo" href="https://avtodor-eng.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p19.svg" alt="АВТОДОР">
+            </a>
+            <a class="partner-logo" href="https://senator.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p20.svg" alt="СХ СЕНАТОР">
+            </a>
+            <a class="partner-logo" href="https://gradstroyproekt.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p21.svg" alt="ГРАДСТРОЙ ПРОЕКТ">
+            </a>
+            <a class="partner-logo" href="https://www.transmost.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p22.png" alt="ТРАНСМОСТ">
+            </a>
+            <a class="partner-logo" href="https://okhtagroup.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p23.png" alt="Охта Групп">
+            </a>
+            <a class="partner-logo" href="https://www.dalpiterstroy.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p24.png" alt="Дальпитерстрой">
+            </a>
+            <a class="partner-logo" href="https://fizika.group/" target="_blank" rel="noopener noreferrer">
+                <img src="p25.svg" alt="FIZIKA development">
+            </a>
+            <a class="partner-logo" href="https://most.ooo/" target="_blank" rel="noopener noreferrer">
+                <img src="p26.svg" alt="МОСТ ООО">
+            </a>
+            <a class="partner-logo" href="https://6543210.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p27.png" alt="ЛЕНСТРОЙТРЕСТ">
+            </a>
+            <a class="partner-logo" href="https://www.rbi.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p28.png" alt="RBI">
+            </a>
+            <a class="partner-logo" href="https://metrogiprotrans.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p29.png" alt="МЕТРОГИПРОТРАНС">
+            </a>
+            <a class="partner-logo" href="https://setlgroup.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="p30.png" alt="SetlGroup">
+            </a>
+        </div>
+    `
+},
                 };
                 function openSheet (key) {
                     var d = sheetData[key];
