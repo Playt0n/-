@@ -484,7 +484,7 @@ address {font-style: normal; }
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 90px;
+    min-height: 115px;
     padding: 14px;
     background: var(--clr-white);
     border: 1px solid rgba(0, 0, 0, 0.08);
@@ -498,12 +498,18 @@ address {font-style: normal; }
 }
 .partner-logo img {
     display: block;
-    max-width: 100%;
-    max-height: 56px;
+    max-width: 85%;
+    max-height: 72px;
     width: auto;
     height: auto;
     object-fit: contain;
 }
+.partner-logo img[src$="p02.png"] { transform: scale(2);}
+.partner-logo img[src$="p07.png"] { transform: scale(2);}
+.partner-logo img[src$="p25.png"] { transform: scale(2);}
+.partner-logo img[src$="p27.png"] { transform: scale(2);}
+.partner-logo img[src$="p29.png"] { transform: scale(1.5);}
+.partner-logo img[src$="p30.png"] { transform: scale(2);}
 @media (max-width: 900px) {
     .cards__grid { grid-template-columns: 1fr; 
     max-width: 560px;
